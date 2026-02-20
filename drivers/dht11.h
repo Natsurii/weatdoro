@@ -1,9 +1,21 @@
+/**
+ * @file dht11.h
+ * @author natsurii
+ * @brief 
+ * @version 0.1
+ * @date 2026-02-20
+ * 
+ * @copyright Copyright (c) 2026
+ * 
+ */
+#ifndef DHT11_H
+#define DHT11_H
 #include <cstdint>
 #include <stdint.h>
 
 typedef float dht11_raw_t;
 
-typedef enum Status{
+typedef enum Status {
     OK, 
     READING,
     DONE,
@@ -39,3 +51,4 @@ float helper_convertCtoF(float temp_in_c);
 float helper_convertCtoK(float temp_in_c);
 float helper_convertFtoC(float temp_in_f);
 float helper_convertKtoC(float temp_in_k);
+#endif /* DHT11_H */
