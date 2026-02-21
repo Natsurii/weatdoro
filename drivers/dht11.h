@@ -10,7 +10,6 @@
  */
 #ifndef DHT11_H
 #define DHT11_H
-#include <cstdint>
 #include <stdint.h>
 
 typedef float dht11_raw_t;
