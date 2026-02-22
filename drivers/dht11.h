@@ -34,6 +34,7 @@ typedef struct dht11_handle {
     dht11_raw_t temp;
     dht11_raw_t heat_index;
     dht11_status_e status;
+    dht11_unit_e current_unit;
 } dht11_handle_t;
 
 typedef struct dht11_config {
@@ -43,9 +44,17 @@ typedef struct dht11_config {
 
 void dht11_init(dht11_handle_t *h, dht11_config_t *config);
 void dht11_getData(dht11_handle_t *h);
+
+void dht11_setTemperature(dht11_handle_t *h, dht11_raw_t temp);
+void dht11_setRelativeHumidity(dht11_handle_t *h, dht11_raw_t rh);
+void dht11_setHeatIndex(dht11_handle_t *h,  dht11_raw_t hi);
+void dht11_setTempUnit(dht11_handle_t *h,  dht11_unit_e *unit);
+
 dht11_raw_t dht11_getTemperature(dht11_handle_t *h);
 dht11_raw_t dht11_getRelativeHumidity(dht11_handle_t *h);
 dht11_raw_t dht11_getHeatIndex(dht11_handle_t *h);
+dht11_unit_e dht11_getTempUnit(dht11_handle_t *h);
+
 float helper_convertCtoF(float temp_in_c);
 float helper_convertCtoK(float temp_in_c);
 float helper_convertFtoC(float temp_in_f);
