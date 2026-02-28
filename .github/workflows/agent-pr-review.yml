@@ -1,0 +1,27 @@
+name: OpenRouter AI Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: OpenRouter PR Reviewer
+        uses: LearningCircuit/Friendly-AI-Reviewer@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          openrouter_api_key: ${{ secrets.OPENROUTER_API_KEY }}
+          ai_model: "anthropic/claude-3.7-sonnet" 
+          custom_prompt: |
+            You are a Senior Engineer. Review this PR for:
+            1. Logic bugs or edge cases.
+            2. Performance bottlenecks.
+            3. Clean code principles.
+            Be concise and only comment if there is a real issue.
