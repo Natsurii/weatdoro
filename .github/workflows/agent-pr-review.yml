@@ -18,7 +18,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           open_router_key: ${{ secrets.OPENROUTER_API_KEY }}
-          model_id: "anthropic/claude-3.7-sonnet" 
+          model_id: "qwen/qwen3-coder-next" 
           custom_prompt: |
             You are a Senior Engineer. Review this PR for:
             1. Logic bugs or edge cases.
