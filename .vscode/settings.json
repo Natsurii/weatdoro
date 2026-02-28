@@ -1,0 +1,7 @@
+{
+    "doxdocgen.generic.useGitUserEmail": false,
+    "doxdocgen.generic.useGitUserName": false,
+    "doxdocgen.generic.authorName": "",
+    "doxdocgen.generic.authorTag": "@author {author}",
+    "makefile.makefilePath": "Makefile"
+}
