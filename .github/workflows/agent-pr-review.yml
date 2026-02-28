@@ -17,7 +17,7 @@ jobs:
         uses: jonit-dev/openrouter-github-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          openrouter_api_key: ${{ secrets.OPENROUTER_API_KEY }}
+          open_router_key: ${{ secrets.OPENROUTER_API_KEY }}
           model_id: "anthropic/claude-3.7-sonnet" 
           custom_prompt: |
             You are a Senior Engineer. Review this PR for:
