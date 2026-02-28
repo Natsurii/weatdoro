@@ -14,11 +14,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: OpenRouter PR Reviewer
-        uses: LearningCircuit/Friendly-AI-Reviewer@v2
+        uses: jonit-dev/openrouter-github-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           openrouter_api_key: ${{ secrets.OPENROUTER_API_KEY }}
-          ai_model: "anthropic/claude-3.7-sonnet" 
+          model_id: "anthropic/claude-3.7-sonnet" 
           custom_prompt: |
             You are a Senior Engineer. Review this PR for:
             1. Logic bugs or edge cases.
