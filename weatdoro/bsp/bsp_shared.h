@@ -1,0 +1,5 @@
+#ifndef BSP_SHARED_H
+#define BSP_SHARED_H
+
+#define BSP_SHARED_SYSTEM_CLK_FREQ 84000000U
+#endif /* BSP_SHARED_H */
